@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: #111;
+    cursor: none; /* skryje normální kurzor */
+    overflow: hidden;
+  }
+  
+  .cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: cyan;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px cyan, 0 0 30px cyan;
+  }
+  
+  .trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: cyan;
+    pointer-events: none;
+    opacity: 0.6;
+    transform: translate(-50%, -50%);
+    animation: fadeOut 0.5s forwards;
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.2);
+    }
+  }
+  
